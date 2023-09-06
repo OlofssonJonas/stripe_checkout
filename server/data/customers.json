@@ -1,0 +1,92 @@
+[
+  {
+    "username": "Sofia",
+    "password": "$2b$15$dVQKVPqXlo.Tptlqvdi0FOlcCrQHfN6PuwQmeqpG.uFv4F9Dic/nS",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa6Gt3cyEnEvfM"
+  },
+  {
+    "username": "Sofia",
+    "password": "$2b$15$HJHruwwf9AHGXUrsVDxroOfFfM/4ZCCXw8sdJvPmdUmAZg1VK4Ily",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa6HvnKQzfZkkn"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$v66El.oXAPckTf9LvDJDf.tUI2u9U5wrH0lG0MPMRn51lUHe2ViIa",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7H1eDIbaxMJw"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$f0RgNR/cOJUYQWfWBtxbgu0Fcb5nqIDTeb0Mfmj0tQpeA7l4ps8XW",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7VQoC2sG5x6Y"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$bfvGC3T9XatvuHrOZTnNu.UKYhA3K19pxrVD0ZSoN1Yv4X45JIUZ.",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7Vxgy0FYdCIN"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$23yptv1tC/SzDQ2i4.tZju7bbGBPZk6JuLABbO/KOdIJradHE6NUq",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7WtQXIWZaNWF"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$U4DDpd8gzdWc3WWLhM0J/OSyNUhgRLIZjdz8jQK93UufPzUd2X55W",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7X8XRvw07oPz"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$odDvfvPjj2GRlap.ekul.eolsTD4tpimuNHnMphjPau2jb9gbWwnK",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7aQiiU9cnRg3"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$0TAKY6n4mvePDNu3McGZN.ijkGzM803WfcnxuwHe90ibBxwwjnzXa",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7eR7bXsjv7UX"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$U.l63tXzk8MElQn9zuboa.0Y9aFmgO.5bbNIzbkEpLBTptJSsDQ..",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7fV6EQML3COT"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$YNpvODO7HkUiuNLV8Rb2xOSAVQ2AuifdkYe8Qeob61j5dY3mnSS/i",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7fkFbwyvAOrE"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$RN/JTbxgusysUWJ8vI.KvOUE4uFcDkjxUaFsdRA1BREVBbYdo2UVO",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7g32A1OMupju"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$mkK3kX/wQPalFwDPNa1IK.eAw1OsPbtLXpjjXZTqQ4Fmkc/7.6NuS",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7gnvw98NhNvc"
+  },
+  {
+    "username": "Viktoria",
+    "password": "$2b$15$/0VL/u5PJuWdbxVZPO5CIusKM3K15VcQYLqvhaBR/H9OvNTzOGzue",
+    "mail": "Sofia@mail.se",
+    "stripeCustomerId": "cus_Oa7hmp99bjX28F"
+  },
+  {
+    "username": "Jonaa",
+    "password": "$2b$15$i2z7nmLHl3KHmf0qIb./Tu3S2J9qFptgSzKU5JiNIcm3iv0hkmdnW",
+    "email": "Jonas@mail.se",
+    "stripeCustomerId": "cus_OaVjcQe7WjL9my"
+  }
+]
