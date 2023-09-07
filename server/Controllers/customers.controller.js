@@ -11,8 +11,15 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
 
         //REGISTER
     const registerCustomer = async (req, res) => {
+        const { username, password, email } = req.body         
         try {
-            const { username, password, email } = req.body         
+            const existingCustomers = await stripe.customers.list({ email });
+            if (existingCustomers.data.length > 0) {
+              // Customer already exists, handle accordingly (e.g., show an error message)
+              console.log('Customer already exists in Stripe');
+              return;
+            }
+
             //Hashed passWord
         const hashedPassword = await bcrypt.hash(password, 15)
         
@@ -26,6 +33,8 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
 
         //Check if user exist goes here
 
+
+
         //create a stripe customer
         const stripeCustomer = await stripe.customers.create({
             name: user.username,
@@ -37,11 +46,9 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
       const fileData = fs.readFileSync(filePath, 'utf8');
       users = JSON.parse(fileData);
     } catch (err) {
-      // Handle file read errors, or file doesn't exist
       console.error(err);
     }
 
-   
         user.stripeCustomerId = stripeCustomer.id
 
         users.push(user)

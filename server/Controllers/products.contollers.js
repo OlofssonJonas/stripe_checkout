@@ -7,7 +7,8 @@ const stripe = initSripe()
 
 const getAllProducts = async(req, res) => {
     const products = await stripe.products.list({
-        limit: 5,
+        limit: 10,
+        expand: ["data.default_price"],
     });
     res.json(products)
 }

@@ -3,7 +3,7 @@ const  initSripe  = require("../stripe")
 const stripe = initSripe()
 //console.log(process.env.STRIPE_SECRET_KEY)
 
-const CLIENT_URL = "http://127.0.0.1:5173";
+const CLIENT_URL = "http://localhost:5173";
 
 const checkoutController = async(req, res) => {
     try {

@@ -1,0 +1,14 @@
+.header {
+    background-color: lightcoral;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    margin: 10px;
+    border-radius: 40px;
+    padding: 4px;
+}
+
+

@@ -1,0 +1,19 @@
+.products {
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+}
+
+.buy_btn {
+    width: 100px;
+    height: 20px;
+}
+
+button {
+    margin: 10px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}

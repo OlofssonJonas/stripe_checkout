@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import "./checkout.css"
 
 function Checkout() {
   const [cart, setCart] = useState([
@@ -30,12 +31,13 @@ function Checkout() {
     }
 
     const { url } = await response.json();
+    console.log(url)
     window.location = url;
   }
 
   return (
-    <div>
-      <button onClick={handlePayment}>GE MIG PENGAR</button>
+    <div className="checkout">
+      <button className="cart_btn" onClick={handlePayment}>GO TO CHECKOUT</button>
     </div>
   );
 }

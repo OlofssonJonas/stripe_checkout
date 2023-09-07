@@ -1,25 +1,31 @@
 
-import LoginForm from './components/LoginForm'
+import LoginForm from './components/Loginform/LoginForm'
+import ProductPage from './components/ProductPage/ProductPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Confirmation from './components/Confirmatiion'
-import Checkout from './components/Checkout'
+import Confirmation from './components/Confirmation/Confirmation'
+import Checkout from './components/Checkout/Checkout'
 import UserContextProvider from './context/UserContext'
+import ProductContextProvider from './context/ProductContext'
+import "./App.css"
 
 function App() {
   return (
     <>
+    <ProductContextProvider>
     <UserContextProvider>
+    <Checkout />
+    <LoginForm />
     <BrowserRouter>
       <Routes>
-       {/* <Route path="/" element={<Checkout />} /> */}
+         <Route path="/" element={<ProductPage />} /> 
        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </BrowserRouter>
-    <Checkout />
-    {/* <LoginForm /> */}
     </UserContextProvider>
+    </ProductContextProvider>
+    
     </>
-  )
+    )
 }
 
 export default App
