@@ -1,5 +1,4 @@
 
-import LoginForm from './components/Loginform/LoginForm'
 import ProductPage from './components/ProductPage/ProductPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Confirmation from './components/Confirmation/Confirmation'
@@ -13,8 +12,6 @@ function App() {
     <>
     <ProductContextProvider>
     <UserContextProvider>
-    <Checkout />
-    <LoginForm />
     <BrowserRouter>
       <Routes>
          <Route path="/" element={<ProductPage />} /> 

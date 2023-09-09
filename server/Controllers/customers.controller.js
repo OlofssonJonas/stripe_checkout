@@ -54,7 +54,7 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
         users.push(user)
 
         fs.writeFileSync(filePath, JSON.stringify(users, null, 2))
-        res.json(({ success: true}))
+       res.status(200).json(({ success: true}))
        
     } catch (error) {
         console.log(error)
@@ -77,7 +77,7 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
                 if(comparePassword) {
                     req.session = user
                     console.log("req", req.session)
-                    res.json({ message: "login success", user: {username: user.username, email: user.email }})
+                    res.status(200).json(user)
                 }
             } catch (error){
                 console.log(error)

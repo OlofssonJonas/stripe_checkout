@@ -13,3 +13,8 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+.procuct-content {
+    width: 100%;
+    display: flex;
+}

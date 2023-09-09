@@ -1,19 +1,12 @@
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./checkout.css"
+import { ProductContext } from "../../context/ProductContext";
 
 function Checkout() {
-  const [cart, setCart] = useState([
-    {
-      product: "price_1Nn556JvLAcu8KHYDyfDSka3",
-      quantity: 2,
-    },
-    {
-      product: "price_1Nn544JvLAcu8KHYfBIUPegD",
-      quantity: 1,
-    },
-  ]);
-
+  const  { cart, setCart, products, setProducts } = useContext(ProductContext)
+  console.log(cart)
+  
   async function handlePayment() {
     const response = await fetch(
       "http://localhost:3000/api/create-checkout-session",
@@ -22,21 +15,22 @@ function Checkout() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(cart),
+        body: JSON.stringify({cart}),
       }
-    );
-
-    if (!response.ok) {
-      return;
+      );
+      
+      if (!response.ok) {
+        return;
+      }
+      
+      const { url } = await response.json();
+      console.log(url)
+      window.location = url;
     }
-
-    const { url } = await response.json();
-    console.log(url)
-    window.location = url;
-  }
-
-  return (
-    <div className="checkout">
+    
+    
+    return (
+      <div className="checkout">
       <button className="cart_btn" onClick={handlePayment}>GO TO CHECKOUT</button>
     </div>
   );

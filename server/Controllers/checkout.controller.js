@@ -6,14 +6,16 @@ const stripe = initSripe()
 const CLIENT_URL = "http://localhost:5173";
 
 const checkoutController = async(req, res) => {
-    try {
-        const session = await stripe.checkout.sessions.create({
-          line_items: req.body.map((item) => {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      line_items: req.body.map((item) => {
+            console.log(req.body)
             return {
               price: item.product,
               quantity: item.quantity,
             };
           }),
+        
           mode: "payment",
           success_url: `${CLIENT_URL}/confirmation`,
           cancel_url: CLIENT_URL,

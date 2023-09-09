@@ -4,6 +4,12 @@ export const ProductContext = createContext()
 
 const ProductContextProvider = ({ children }) => {
     const [ products, setProducts ] = useState([])
+    const [ cart, setCart ] = useState([
+        {
+          product: products.price,
+          quantity: products.quantity,
+        }
+    ])
 
     useEffect(() => {
   const getProducts = async() => {
@@ -14,12 +20,9 @@ const ProductContextProvider = ({ children }) => {
   getProducts()
   }, [])  //products i hakparantesen gör konstiga saker
 
-  
-    
-
     return (
         <ProductContext.Provider 
-            value={{ products, setProducts }}>
+            value={{ products, setProducts, cart, setCart }}>
                 { children }
         </ProductContext.Provider>
     )

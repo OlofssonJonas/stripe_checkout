@@ -7,13 +7,12 @@ import React from 'react'
 const LoginForm = () => {
   const { username, setUsername, email, setEmail, password, setPassword, login, registration,  data } = useContext(UserContext)
   //console.log(data.user.username)
-  console.log(data)
+
   
   return (
-    <div className='header'>
+    <div className='login_header'> 
       <div>
         <h2>Logga in:</h2>
-        <h2>Du är inloggad som: {}</h2>
         <input type='text' onChange={(e) => setUsername(e.target.value)} placeholder='Användarnamn' />
         <input type='text' onChange={e => setPassword(e.target.value)}placeholder='Lösenord' />
         <button onClick={login} className='login'>Logga in</button>
