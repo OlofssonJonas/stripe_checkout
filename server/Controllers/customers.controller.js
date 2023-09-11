@@ -62,7 +62,6 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
 
         //LOGIN
         const loginCustomer = async(req, res) => {
-            console.log(req.session)
             const { username, password, email } = req.body
             try {
                 const fileData = fs.readFileSync(filePath, 'utf8');
