@@ -69,7 +69,7 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
                 const users = JSON.parse(fileData)
                 const user = users.find((u) => u.username === username && u.email === email)
                 if(!user) {
-                    return res.status(404).json({ message: 'Du är inte behörig'})
+                    return res.status(404).json({ message: 'Fel användarnamn eller lösenord'})
                 }
 
                 const comparePassword = await bcrypt.compare(password, user.password)

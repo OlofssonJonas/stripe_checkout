@@ -9,18 +9,16 @@ const checkoutController = async(req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
       line_items: req.body.map((item) => {
-            console.log(req.body)
-            return {
-              price: item.product,
-              quantity: item.quantity,
-            };
-          }),
-        
-          mode: "payment",
-          success_url: `${CLIENT_URL}/confirmation`,
-          cancel_url: CLIENT_URL,
-        });
-    
+        return {
+          price: item.product,
+          quantity: item.quantity,
+        };
+      }),
+      customer: req.session.stripeCustomerId,
+      mode: "payment",
+      success_url: `${CLIENT_URL}/confirmation`,
+      cancel_url: CLIENT_URL,
+      });
         res.status(200).json({ url: session.url });
       } catch (error) {
         console.log(error.message);

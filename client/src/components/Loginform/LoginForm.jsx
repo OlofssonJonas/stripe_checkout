@@ -6,7 +6,7 @@ import React from 'react'
 
 const LoginForm = () => {
   const { username, setUsername, email, setEmail, password, setPassword, login, registration,  data } = useContext(UserContext)
-  //console.log(data.user.username)
+
 
   
   return (
@@ -17,6 +17,7 @@ const LoginForm = () => {
         <input type='text' onChange={e => setPassword(e.target.value)}placeholder='Lösenord' />
         <button onClick={login} className='login'>Logga in</button>
         </div>
+        <h2><u>MAC STORE</u></h2>
         <div>
         <h2>Skapa användare:</h2>
         <input type='text' onChange={e =>setUsername(e.target.value)} placeholder='Användare' />

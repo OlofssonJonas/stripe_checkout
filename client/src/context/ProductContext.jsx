@@ -4,16 +4,11 @@ export const ProductContext = createContext()
 
 const ProductContextProvider = ({ children }) => {
     const [ products, setProducts ] = useState([])
-    const [ cart, setCart ] = useState([
-        {
-          product: products.price,
-          quantity: products.quantity,
-        }
-    ])
+    const [ cart, setCart ] = useState([])
 
     useEffect(() => {
   const getProducts = async() => {
-    const response = await fetch('http://localhost:3000/api/list-products')
+    const response = await fetch('/api/list-products')
     const data = await response.json()
     setProducts(data.data)
   }

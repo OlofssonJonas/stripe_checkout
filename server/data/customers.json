@@ -106,5 +106,11 @@
     "password": "$2b$15$91dEZOk7FQOztXadcCXWNOX3OoVP.I3waYwCa5pd79j9aYBLZ.6uK",
     "email": "Ammar@mail.se",
     "stripeCustomerId": "cus_Oat5kCE3ltiGVp"
+  },
+  {
+    "username": "Guzal",
+    "password": "$2b$15$rGVJLYp5cF82CtVjA9AgNe1fo1xRQgCduBbiILrarrgAKLDucgg8a",
+    "email": "guzal@mail.se",
+    "stripeCustomerId": "cus_OcLjDCUYELQ5fF"
   }
 ]

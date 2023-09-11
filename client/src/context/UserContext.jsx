@@ -9,6 +9,7 @@ const UserContextProvider = ({ children }) => {
     const [ data, setData ] = useState({})
 
             //LOGIN
+            
         const login = async() => {
             try {
                 const response = await fetch("/api/customers/login", {
@@ -18,14 +19,13 @@ const UserContextProvider = ({ children }) => {
                     },
                     body: JSON.stringify({ username: username, password: password })
                 });
-                console.log(response)
+                
                 const data = await response.json()
-                setData(data)
-                    
-                console.log(data)          
-            } catch (error) {
-                console.log(error)
-            }
+                 setData(data)      
+                 console.log(data.password)
+                } catch (error) {
+                    console.log(error)
+                }
         }
 
             //REGISTRATION
@@ -39,7 +39,6 @@ const UserContextProvider = ({ children }) => {
                     body: JSON.stringify({ username: username, password: password, email: email })
                 })
                 const data = await response.json()
-                console.log(data)
             } catch (error) {
                 console.log(error)
             }

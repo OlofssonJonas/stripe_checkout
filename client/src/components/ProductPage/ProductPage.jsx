@@ -6,22 +6,21 @@ import Checkout from '../Checkout/Checkout'
 
 const ProductPage = () => {
 const { products, setProducts, cart, setCart } = useContext(ProductContext)
-//const [ cart, setCart ] = useState([])
-console.log(cart)
-//console.log(products)
 
 
-const addToCart = (product) => {
-    const existingProduct = cart.find(item => item.id === product.id);
+
+const addToCart = (productId) => {
+  const product = productId.default_price.id
+    const existingProduct = cart.find(item => item.id === productId.id);
 
     if (existingProduct) {
       const updatedCart = cart.map(item =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === productId.id ? { ...item, quantity: item.quantity + 1 } : item
         );
         setCart(updatedCart);
-        console.log(updatedCart)
     } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
+
+      setCart([...cart, { ...productId, product, quantity: 1 }]);
     }
 }
 
