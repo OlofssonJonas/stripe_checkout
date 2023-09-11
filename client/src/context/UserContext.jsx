@@ -21,8 +21,7 @@ const UserContextProvider = ({ children }) => {
                 });
                 
                 const data = await response.json()
-                 setData(data)      
-                 console.log(data.password)
+                 setData(data)     
                 } catch (error) {
                     console.log(error)
                 }

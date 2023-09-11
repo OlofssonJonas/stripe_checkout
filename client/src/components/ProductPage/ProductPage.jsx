@@ -19,7 +19,6 @@ const addToCart = (productId) => {
         );
         setCart(updatedCart);
     } else {
-
       setCart([...cart, { ...productId, product, quantity: 1 }]);
     }
 }

@@ -66,7 +66,7 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
             try {
                 const fileData = fs.readFileSync(filePath, 'utf8');
                 const users = JSON.parse(fileData)
-                const user = users.find((u) => u.username === username && u.email === email)
+                const user = users.find((u) => u.username === username)
                 if(!user) {
                     return res.status(404).json({ message: 'Fel användarnamn eller lösenord'})
                 }
