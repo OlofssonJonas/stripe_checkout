@@ -3,6 +3,7 @@ import { ProductContext } from '../../context/ProductContext'
 import "./ProductPage.css"
 import LoginForm from '../Loginform/LoginForm'
 import Checkout from '../Checkout/Checkout'
+import { FaShoppingBasket } from 'react-icons/fa'
 
 const ProductPage = () => {
 const { products, setProducts, cart, setCart } = useContext(ProductContext)
@@ -46,7 +47,7 @@ const addToCart = (productId) => {
     <LoginForm />
     <Checkout />
     <div className='product-header'>
-      <h1>Products in store:</h1>
+      <h1>Produkter i webshopen:</h1>
       </div>
       <div className='product-content'>
       
@@ -64,8 +65,8 @@ const addToCart = (productId) => {
           </div>
         ))} 
         </div>
-        <div>
-          <h1>Varukorg:</h1>
+        <div className='header-cart'>
+          <h1><FaShoppingBasket />Varukorg:</h1>
           <div>
           {cart.map((c, idx) => (
             <div key={idx} className='right-side'>

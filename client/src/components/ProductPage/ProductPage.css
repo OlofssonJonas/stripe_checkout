@@ -36,6 +36,16 @@ h1 {
     padding: 10px;
 }
 
+h1 {
+    width: auto;
+    padding: 10px;
+    display: flex;
+}
+
+.header-cart {
+    height: 50px;
+}
+
 span {
    font-size: x-large;
    font-weight: bolder;

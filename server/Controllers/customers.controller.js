@@ -66,9 +66,10 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
             try {
                 const fileData = fs.readFileSync(filePath, 'utf8');
                 const users = JSON.parse(fileData)
+                
                 const user = users.find((u) => u.username === username)
                 if(!user) {
-                    return res.status(404).json({ message: 'Fel användarnamn eller lösenord'})
+                    return res.status(401).json({ message: 'Fel användarnamn eller lösenord'})
                 }
 
                 const comparePassword = await bcrypt.compare(password, user.password)
@@ -77,6 +78,9 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
                     req.session = user
                     console.log("req", req.session)
                     res.status(200).json(user)
+                }else {
+
+                    res.status(401).json('Wrong username or password')
                 }
             } catch (error){
                 console.log(error)

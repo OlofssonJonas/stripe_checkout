@@ -7,6 +7,9 @@ const UserContextProvider = ({ children }) => {
     const [ password, setPassword ] = useState('')
     const [ email, setEmail ] = useState('')
     const [ data, setData ] = useState({})
+    const [ existingUser, setExistingUser ] = useState('')
+    const [ wrongUser, setWrongUser ] = useState('')
+    
 
             //LOGIN
             
@@ -19,10 +22,12 @@ const UserContextProvider = ({ children }) => {
                     },
                     body: JSON.stringify({ username: username, password: password })
                 });
-                
+
                 const data = await response.json()
-                 setData(data)     
-                } catch (error) {
+
+                setWrongUser(response.status === 401)
+                setData(data) 
+            } catch (error) {
                     console.log(error)
                 }
         }
@@ -38,6 +43,11 @@ const UserContextProvider = ({ children }) => {
                     body: JSON.stringify({ username: username, password: password, email: email })
                 })
                 const data = await response.json()
+
+                console.log(response.status)
+
+             setExistingUser(response.status === 404)
+                console.log(data)
             } catch (error) {
                 console.log(error)
             }
@@ -47,7 +57,7 @@ const UserContextProvider = ({ children }) => {
         
         return (
             <UserContext.Provider
-            value={{ username, setUsername, password, setPassword, email, setEmail, data, login, registration }}>
+            value={{ username, setUsername, password, setPassword, email, setEmail, data, login, wrongUser, existingUser, registration }}>
         { children }
         </UserContext.Provider>
         )
