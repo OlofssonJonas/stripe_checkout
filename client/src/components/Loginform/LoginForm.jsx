@@ -5,7 +5,7 @@ import { UserContext } from '../../context/UserContext'
 import React from 'react'
 
 const LoginForm = () => {
-  const {setUsername, setEmail, existingUser, wrongUser ,setPassword, login, registration} = useContext(UserContext)
+  const {setUsername, setEmail, existingUser, registerUser,  wrongUser ,setPassword, login, registration} = useContext(UserContext)
 
 
   
@@ -17,7 +17,6 @@ const LoginForm = () => {
         <input type='text' onChange={e => setPassword(e.target.value)}placeholder='Lösenord' />
         <button onClick={login} className='login'>Logga in</button>
         {wrongUser ? <p>Fel användarnamn eller lösenord</p> : ''}  
-        {/* varför jämför den inte lösenordet? */}
         </div>
         <div className='login-header-center'>
         <h2><u>MAC STORE</u></h2>
@@ -30,6 +29,9 @@ const LoginForm = () => {
         <input type='text' onChange={e => setPassword(e.target.value)} placeholder='Lösenord' />
         <button onClick={registration} className='login'>Registrera dig</button>
         {existingUser ? <p>Användarnamnet finns redan</p> : ''}
+        {registerUser ? <p>Registreringen är klar, det är bara att logga in</p> : ''}
+  
+        
         </div>
         
     </div>

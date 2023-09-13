@@ -78,8 +78,6 @@ const addToCart = (productId) => {
       </div>
       </div>
            </>
-
   )
 }
-
 export default ProductPage

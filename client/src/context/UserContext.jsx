@@ -9,6 +9,7 @@ const UserContextProvider = ({ children }) => {
     const [ data, setData ] = useState({})
     const [ existingUser, setExistingUser ] = useState('')
     const [ wrongUser, setWrongUser ] = useState('')
+    const [ registerUser, setRegisterUser ] = useState('')
     
 
             //LOGIN
@@ -44,10 +45,8 @@ const UserContextProvider = ({ children }) => {
                 })
                 const data = await response.json()
 
-                console.log(response.status)
-
              setExistingUser(response.status === 404)
-                console.log(data)
+             setRegisterUser(response.status === 200)
             } catch (error) {
                 console.log(error)
             }
@@ -57,7 +56,7 @@ const UserContextProvider = ({ children }) => {
         
         return (
             <UserContext.Provider
-            value={{ username, setUsername, password, setPassword, email, setEmail, data, login, wrongUser, existingUser, registration }}>
+            value={{ username, setUsername, password, setPassword, email, setEmail, data, login, wrongUser, registerUser, existingUser, registration }}>
         { children }
         </UserContext.Provider>
         )

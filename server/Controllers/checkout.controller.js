@@ -14,7 +14,7 @@ const checkoutController = async(req, res) => {
           quantity: item.quantity,
         };
       }),
-      customer: req.session.stripeCustomerId,
+      customer: req.session.stripeCustomerId, 
       mode: "payment",
       success_url: `${CLIENT_URL}/confirmation`,
       cancel_url: CLIENT_URL,

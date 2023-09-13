@@ -13,7 +13,7 @@ const ProductContextProvider = ({ children }) => {
     setProducts(data.data)
   }
   getProducts()
-  }, [])  //products i hakparantesen gör konstiga saker
+    }, [])
 
     return (
         <ProductContext.Provider 

@@ -17,6 +17,7 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
             if (existingCustomers.data.length > 0) {
               // Customer already exists, handle accordingly (e.g., show an error message)
               console.log('Customer already exists in Stripe');
+              res.status(404).json('User already exist')
               return;
             }
 
