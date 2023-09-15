@@ -1,6 +1,6 @@
 
-const  initSripe  = require("../stripe")
-const stripe = initSripe()
+const  initStripe  = require("../stripe")
+const stripe = initStripe()
 //console.log(process.env.STRIPE_SECRET_KEY)
 
 

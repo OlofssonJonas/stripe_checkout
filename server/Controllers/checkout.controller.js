@@ -1,6 +1,6 @@
 
-const  initSripe  = require("../stripe")
-const stripe = initSripe()
+const  initStripe  = require("../stripe")
+const stripe = initStripe()
 //console.log(process.env.STRIPE_SECRET_KEY)
 
 const CLIENT_URL = "http://localhost:5173";
@@ -20,7 +20,7 @@ const checkoutController = async(req, res) => {
       cancel_url: CLIENT_URL,
       allow_promotion_codes: true,
       });
-        res.status(200).json({ url: session.url });
+        res.status(200).json({ url: session.url, sessionId: session.id });
       } catch (error) {
         console.log(error.message);
         res.status(400).json("Det gick inte bra...");
