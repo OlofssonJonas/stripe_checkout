@@ -24,8 +24,7 @@ const verifyPayment = async(req, res) => {
                     price: item.price.unit_amount / 100,
                     quantity: item.quantity,
                 }
-            }) 
-            
+            })            
         };
         
         let orders = []
@@ -53,7 +52,6 @@ const verifyPayment = async(req, res) => {
             const fileData = fs.readFileSync(filePath, 'utf8');
             const orders = JSON.parse(fileData)
             const userOrders = orders.filter((order) => order.customer === req.params.id)
-            console.log(orders)
             res.status(200).json(userOrders)
         }catch(error){
             console.log(error)

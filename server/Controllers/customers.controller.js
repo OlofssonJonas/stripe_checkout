@@ -4,7 +4,6 @@ const cookieSession = require('cookie-session')
 const fs = require('fs')
 const  initStripe  = require("../stripe")
 const stripe = initStripe()
-//console.log(process.env.STRIPE_SECRET_KEY)
 
 const path = require('path')
 const filePath = path.join(__dirname, "..", "data", "customers.json")
@@ -15,8 +14,6 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
         try {
             const existingCustomers = await stripe.customers.list({ email });
             if (existingCustomers.data.length > 0) {
-              // Customer already exists, handle accordingly (e.g., show an error message)
-              console.log('Customer already exists in Stripe');
               res.status(404).json('User already exist')
               return;
             }
@@ -52,7 +49,7 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
 
         fs.writeFileSync(filePath, JSON.stringify(users, null, 2))
        res.status(200).json(({ success: true}))
-       
+
     } catch (error) {
         console.log(error)
     }}
@@ -73,10 +70,8 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
                 
                 if(comparePassword) {
                     req.session = user
-                    console.log("req", req.session)
                     res.status(200).json(user)
                 }else {
-
                     res.status(401).json('Wrong username or password')
                 }
             } catch (error){
