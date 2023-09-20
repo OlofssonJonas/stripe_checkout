@@ -32,10 +32,6 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
             email,
         }
 
-        //Check if user exist goes here
-
-
-
         //create a stripe customer
         const stripeCustomer = await stripe.customers.create({
             name: user.username,
@@ -86,6 +82,7 @@ const filePath = path.join(__dirname, "..", "data", "customers.json")
             } catch (error){
                 console.log(error)
             }
+ 
         }
 
     module.exports = { registerCustomer, loginCustomer }

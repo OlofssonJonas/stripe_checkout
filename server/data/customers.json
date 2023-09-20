@@ -46,5 +46,11 @@
     "password": "$2b$15$Ce7N9f84PQD0KfMENopUduQDp1rhmm7o0F2OTVJT6e4BxIWM8jCsO",
     "email": "pelle@mail.se",
     "stripeCustomerId": "cus_Ocl1fSK3UfP4nl"
+  },
+  {
+    "username": "Pekka",
+    "password": "$2b$15$FtV/4N4Ojl4XmlEinM8el.pDGlhClFuTig4JVm5ciJ/m.YWKzekyS",
+    "email": "pekka@mail.se",
+    "stripeCustomerId": "cus_OfPBr5TY9EoQr9"
   }
 ]

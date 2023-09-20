@@ -32,8 +32,7 @@ app.use(
       secure: false,
     })
     );
-    
-  app.use("/api", customerRouter)
+  
   app.use("/api", customerRouter)
   app.use("/api", productRouter)
   app.use("/api", checkoutRouter)

@@ -1,8 +1,10 @@
 
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom"
 import "./checkout.css"
 import { ProductContext } from "../../context/ProductContext";
 import { UserContext } from "../../context/UserContext";
+import Orders from "../Orders/Orders";
 
 function Checkout() {
   const  { cart, setCart, products, setProducts } = useContext(ProductContext)
@@ -34,6 +36,9 @@ function Checkout() {
     return (
       <div className="checkout">
         {loggedInUserId ? <h3>Välkommen {data.username}</h3> : '' }
+       { loggedInUserId ? <Link to="/ordrar">
+        <button>Ordrar</button>
+        </Link> : ''}
         {loggedInUserId ? <button className="cart_btn" onClick={handlePayment}>Gå till kassan</button> : <p>Logga in för att beställa</p>}
       
     </div>

@@ -10,6 +10,8 @@ const UserContextProvider = ({ children }) => {
     const [ existingUser, setExistingUser ] = useState('')
     const [ wrongUser, setWrongUser ] = useState('')
     const [ registerUser, setRegisterUser ] = useState('')
+   
+
     
 
             //LOGIN

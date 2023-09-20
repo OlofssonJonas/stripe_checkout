@@ -6,6 +6,7 @@ import Checkout from './components/Checkout/Checkout'
 import UserContextProvider from './context/UserContext'
 import ProductContextProvider from './context/ProductContext'
 import "./App.css"
+import Orders from './components/Orders/Orders'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <UserContextProvider>
     <BrowserRouter>
       <Routes>
+        <Route path='/ordrar' element={<Orders />} />
          <Route path="/" element={<ProductPage />} /> 
        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>

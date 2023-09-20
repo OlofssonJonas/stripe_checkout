@@ -1,11 +1,64 @@
 [
   {
-    "created": 1695021041,
-    "customer": "Sofia",
+    "customer": "Guzal",
+    "created": "9/19/2023",
     "products": [
       {
-        "product": "Macbook Air",
-        "price": 12500,
+        "product": "Airpods",
+        "price": 2300,
+        "quantity": 1
+      },
+      {
+        "product": "Iphone 14 pro",
+        "price": 14500,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "customer": "Viktoria",
+    "created": "9/19/2023",
+    "products": [
+      {
+        "product": "Iphone 14 pro",
+        "price": 14500,
+        "quantity": 1
+      },
+      {
+        "product": "Ipad air",
+        "price": 5400,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "customer": "Jonas",
+    "created": "9/19/2023",
+    "products": [
+      {
+        "product": "Airpods",
+        "price": 2300,
+        "quantity": 1
+      },
+      {
+        "product": "Ipad air",
+        "price": 5400,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "customer": "Pelle",
+    "created": "9/20/2023",
+    "products": [
+      {
+        "product": "Airpods",
+        "price": 2300,
+        "quantity": 1
+      },
+      {
+        "product": "Iphone 14 pro",
+        "price": 14500,
         "quantity": 1
       }
     ]
