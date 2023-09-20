@@ -62,5 +62,43 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "customer": "Jonas",
+    "created": "9/20/2023",
+    "products": [
+      {
+        "product": "Airpods",
+        "price": 2300,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "customer": "Jonas",
+    "created": "9/20/2023",
+    "products": [
+      {
+        "product": "Macbook Air",
+        "price": 12500,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "customer": "Emilia",
+    "created": "9/20/2023",
+    "products": [
+      {
+        "product": "Macbook Air",
+        "price": 12500,
+        "quantity": 1
+      },
+      {
+        "product": "Airpods",
+        "price": 2300,
+        "quantity": 1
+      }
+    ]
   }
 ]

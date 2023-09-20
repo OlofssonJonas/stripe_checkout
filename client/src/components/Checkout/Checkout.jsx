@@ -37,7 +37,7 @@ function Checkout() {
       <div className="checkout">
         {loggedInUserId ? <h3>Välkommen {data.username}</h3> : '' }
        { loggedInUserId ? <Link to="/ordrar">
-        <button>Ordrar</button>
+        <button className="order_btn">Ordrar</button>
         </Link> : ''}
         {loggedInUserId ? <button className="cart_btn" onClick={handlePayment}>Gå till kassan</button> : <p>Logga in för att beställa</p>}
       

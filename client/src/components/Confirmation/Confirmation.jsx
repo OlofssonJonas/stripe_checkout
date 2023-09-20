@@ -31,7 +31,8 @@ const Confirmation = () => {
   }, [])
 
   return (
-    isPaymentVeried ? <h1>Tack för ditt köp, ta en kopp <AiOutlineCoffee /> och invänta din beställning</h1> : <h1>Nåt gick fel</h1>
+    
+    isPaymentVeried ? <h1 className='thanx'>Tack för ditt köp, ta en kopp <AiOutlineCoffee /> och invänta din beställning</h1> : <h1>Nåt gick fel</h1>
   )
 }
 
