@@ -30,7 +30,7 @@ const Orders = () => {
                     <h3>Created: {order.created}</h3>
                     {order.products.map((product, idx) => (
                         <div key={idx} className='products'>
-                            <h3>{product.product}, {product.price} :-  x {product.quantity}</h3>
+                            <h3>{product.product}, {product.price}:-  x {product.quantity}</h3>
                             </div>
                     ))}
                 </div>
